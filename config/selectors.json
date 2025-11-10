@@ -1,33 +1,36 @@
 {
   "product": {
     "denominationButton": "button:has-text('{{amount}}')",
-    "addButton": "button.btn.btn-primary.fs-16.py-0.px-4.rounded-pill:has-text('ADD')",
+    "addButton": "button.btn.btn-primary:has-text(\"ADD\")",
     "quantityContainer": ".define-quantity",
     "quantityInput": "input.qty",
     "incrementButton": "span.inc.button",
     "decrementButton": "span.dec.button",
-    "viewCartLink": "a[href=\"/amexrewardmultiplier/cart\"]"
+    "viewCartLink": "a[href=\"/amexrewardmultiplier/cart\"]",
+    "denominationSelector": ".fv",
+    "rowSelector": ".vg-gread-row"
   },
   "cart": {
     "cartPage": "/amexrewardmultiplier/cart",
-    "payNowButton": "button.btn.btn-primary-2.btn-block:has-text('PAY NOW')",
+    "payNowButton": "button:has-text(\"PAY NOW\")",
     "payNowLink": "a[data-target='#login']"
   },
   "login": {
-    "modalId": "#login",
-    "mobileInput": "input[name='mobile'], input[type='tel']",
-    "emailInput": "input[name='email'], input[type='email']",
-    "getOtpButton": "button:has-text('Get OTP'), button:has-text('GET OTP')",
-    "otpInput": "input[name='otp']",
-    "submitButton": "button:has-text('Submit'), button[type='submit']"
+    "modalId": "login",
+    "mobileInput": "input[name=\"mobile\"]",
+    "emailInput": "input[name=\"email\"]",
+    "getOtpButton": "button:has-text(\"Get OTP\")",
+    "otpInput": "input[name=\"otp\"]",
+    "submitButton": "button[type=\"submit\"]"
   },
   "payment": {
-    "cardSelector": ".card-item, .payment-card",
+    "cardSelector": "[testid^=\"pi_card_\"]",
     "cardLast4": ".card-number, [class*='card']",
     "cvvInput": "input[name='cvv'], input[placeholder*='CVV']",
-    "continueButton": "button:has-text('Continue'), button:has-text('CONTINUE')",
+    "continueButton": "button:has-text(\"CONTINUE SHOPPING\")",
     "otpInput": "input[name='otp']",
     "submitOtpButton": "button:has-text('Submit'), button:has-text('Pay')",
-    "successIndicator": "[class*='success'], .payment-success"
+    "successIndicator": "[class*='success'], .payment-success",
+    "cardLast4Selector": "[testid*=\"_1000\"]"
   }
 }
