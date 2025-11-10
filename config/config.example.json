@@ -1,0 +1,12 @@
+{
+  "targetAmount": 1000,
+  "availableDenominations": [250, 500, 1000, 1500, 5000, 10000],
+  "userDetails": {
+    "mobile": "9876543210",
+    "email": "your-email@example.com"
+  },
+  "cardDetails": {
+    "last4Digits": "1234",
+    "cardName": "Gold Charge"
+  }
+}

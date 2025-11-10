@@ -1,0 +1,33 @@
+{
+  "product": {
+    "denominationButton": "button:has-text('{{amount}}')",
+    "addButton": "button.btn.btn-primary.fs-16.py-0.px-4.rounded-pill:has-text('ADD')",
+    "quantityContainer": ".define-quantity",
+    "quantityInput": "input.qty",
+    "incrementButton": "span.inc.button",
+    "decrementButton": "span.dec.button",
+    "viewCartLink": "a.btn.btn-primary-2.btn-block[href='/amexrewardmultiplier/cart']"
+  },
+  "cart": {
+    "cartPage": "/amexrewardmultiplier/cart",
+    "payNowButton": "button.btn.btn-primary-2.btn-block:has-text('PAY NOW')",
+    "payNowLink": "a[data-target='#login']"
+  },
+  "login": {
+    "modalId": "#login",
+    "mobileInput": "input[name='mobile'], input[type='tel']",
+    "emailInput": "input[name='email'], input[type='email']",
+    "getOtpButton": "button:has-text('Get OTP'), button:has-text('GET OTP')",
+    "otpInput": "input[name='otp']",
+    "submitButton": "button:has-text('Submit'), button[type='submit']"
+  },
+  "payment": {
+    "cardSelector": ".card-item, .payment-card",
+    "cardLast4": ".card-number, [class*='card']",
+    "cvvInput": "input[name='cvv'], input[placeholder*='CVV']",
+    "continueButton": "button:has-text('Continue'), button:has-text('CONTINUE')",
+    "otpInput": "input[name='otp']",
+    "submitOtpButton": "button:has-text('Submit'), button:has-text('Pay')",
+    "successIndicator": "[class*='success'], .payment-success"
+  }
+}

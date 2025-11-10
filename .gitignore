@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.log
+.env
+
+# Config files with sensitive data
+config/config.json
+
+# Keep example config
+!config/config.example.json

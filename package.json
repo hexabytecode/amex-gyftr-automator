@@ -1,0 +1,26 @@
+{
+  "name": "app-amex-gyftr-automator",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "scout:login": "ts-node scripts/scout-login.ts",
+    "scout:payment": "ts-node scripts/scout-payment.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": ["automation", "gyftr", "amex"],
+  "author": "",
+  "license": "ISC",
+  "description": "Automates Gyftr Amex voucher purchasing workflow",
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "playwright": "^1.56.1",
+    "readline-sync": "^1.4.10"
+  }
+}
