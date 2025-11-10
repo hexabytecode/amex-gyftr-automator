@@ -6,7 +6,7 @@
     "quantityInput": "input.qty",
     "incrementButton": "span.inc.button",
     "decrementButton": "span.dec.button",
-    "viewCartLink": "a.btn.btn-primary-2.btn-block[href='/amexrewardmultiplier/cart']"
+    "viewCartLink": "a[href=\"/amexrewardmultiplier/cart\"]"
   },
   "cart": {
     "cartPage": "/amexrewardmultiplier/cart",

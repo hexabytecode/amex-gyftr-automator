@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
-    "scout:login": "ts-node scripts/scout-login.ts",
-    "scout:payment": "ts-node scripts/scout-payment.ts",
+    "scout": "ts-node scripts/scout-flow.ts",
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "ts-node src/index.ts"

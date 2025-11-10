@@ -33,15 +33,13 @@ cp config/config.example.json config/config.json
 
 ## Scouting (Development)
 
-Run scouts to verify/update selectors:
+Run the scout script to verify and update all selectors automatically:
 
 ```bash
-# Scout login popup
-npm run scout:login
-
-# Scout payment page (requires OTP)
-npm run scout:payment
+npm run scout
 ```
+
+This will walk through the entire flow (product → cart → login → payment) and update `config/selectors.json` with the correct selectors.
 
 ## Usage
 
