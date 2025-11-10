@@ -179,7 +179,7 @@ async function scoutFlow() {
     log('✅', 'Clicked PAY NOW');
 
     // Wait for modal to appear and animate in
-    log('📝', 'STEP 9: LOGIN MODAL - Waiting for modal to appear...');
+    log('📝', 'STEP 9: LOGIN MODAL - Inspecting modal...');
     await page.waitForTimeout(2000);
 
     const modal = page.locator(selectors.login.modalId || '#login').first();
@@ -347,19 +347,30 @@ async function scoutFlow() {
         if (cardCount > 0) {
           findings.payment.cardSelector = '[testid^="pi_card_"]';
 
-          // Find card with matching last 4 digits
+          // Find and click card with matching last 4 digits
           if (config.cardDetails && config.cardDetails.last4Digits) {
             const targetCard = page.locator(`[testid*="_${config.cardDetails.last4Digits}"]`).first();
             if (await targetCard.count() > 0) {
               log('✅', `Found card matching last 4 digits: ${config.cardDetails.last4Digits}`);
               findings.payment.cardLast4Selector = `[testid*="_${config.cardDetails.last4Digits}"]`;
+
+              // Click on the card to reveal CVV input
+              log('🖱️ ', 'Clicking on card to reveal CVV input...');
+              await targetCard.click();
+              await page.waitForTimeout(1500);
+              log('✅', 'Clicked card - CVV input should now be visible');
+            } else {
+              log('⚠️ ', `Card with last 4 digits ${config.cardDetails.last4Digits} not found`);
             }
+          } else {
+            log('⚠️ ', 'No cardDetails in config - skipping card selection');
           }
         } else {
           log('⚠️ ', 'No card elements found');
         }
 
-        // Find CVV input
+        // Find CVV input (should be visible after clicking card)
+        await page.waitForTimeout(500);
         const cvvInput = page.locator('input[testid="edt_cvv"]').first();
         if (await cvvInput.count() === 0) {
           // Fallback selector
